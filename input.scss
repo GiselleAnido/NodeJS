@@ -1,0 +1,109 @@
+@use"reset"; //link _reset that is a partial to the original scss sheet
+
+body{
+    background-color: rgb(162, 235, 235);
+}
+
+
+// variables
+
+$main-bg-color:  rgb(80, 227, 247);
+
+body{
+    background-color: $main-bg-color;
+}
+
+ul{
+    width: 60%;
+    margin: 5% auto;
+    border: 2px solid black;
+
+    &:hover{
+        opacity: 0.5;
+        cursor:pointer;
+    }
+
+    li{
+        padding: 10px;
+        color: blue;
+        list-style: none;
+
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+// // CSS example
+
+// .breakfast{
+//     border:  3px solid rgb(142, 221, 142);
+//     box-shadow: 1px 1px 0 #ddd;
+//     margin: 0 0 10px 0;
+//     padding: 15px;
+// }
+
+// .lunch{
+
+//     background-color: rgb(183, 243, 183);
+//     box-shadow: 1px 1px 0 #ddd;
+//     margin: 0 0 10px 0;
+//     padding: 15px;
+// } 
+// //
+
+//extends
+
+%meal-box{
+    box-shadow: 1px 1px 0 #ddd;
+    border: 2px solid rgb(228, 150, 228);
+     margin: 0 0 10px 0;
+       padding: 15px;
+}
+
+.breakfast{
+    @extend %meal-box;
+}
+
+.lunch{
+    @extend %meal-box;
+    background-color: rgb(231, 224, 123);
+}
+
+.dinner{
+    @extend %meal-box;
+    color: rgb(9, 9, 192);
+}
+
+//mixins
+
+@mixin colorize-paragraph($color){
+    border: dotted 3px white;
+    background-color: $color;
+    padding: 5px;
+}
+
+.p-1{
+    @include colorize-paragraph(rgba(236, 219, 65, 0.836))
+}
+
+.p-2{
+    @include colorize-paragraph(rgba(255, 0, 0, 0.89))
+}
+
+.p-3{
+    @include colorize-paragraph(rgb(219, 150, 213));
+}
+
+
+//MAPS
+
+$colors:(
+    "primary":rgb(247, 6, 146),
+    "secondary": blue,
+    "neutral":#efefef,
+);
+
+h2{
+    color: map-get($colors, primary); //or secondary, etc
+}

@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(162, 235, 235);
+}
+
+body {
+  background-color: rgb(80, 227, 247);
+}
+
+ul {
+  width: 60%;
+  margin: 5% auto;
+  border: 2px solid black;
+}
+ul:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+ul li {
+  padding: 10px;
+  color: blue;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
+
+.dinner, .lunch, .breakfast {
+  box-shadow: 1px 1px 0 #ddd;
+  border: 2px solid rgb(228, 150, 228);
+  margin: 0 0 10px 0;
+  padding: 15px;
+}
+
+.lunch {
+  background-color: rgb(231, 224, 123);
+}
+
+.dinner {
+  color: rgb(9, 9, 192);
+}
+
+.p-1 {
+  border: dotted 3px white;
+  background-color: rgba(236, 219, 65, 0.836);
+  padding: 5px;
+}
+
+.p-2 {
+  border: dotted 3px white;
+  background-color: rgba(255, 0, 0, 0.89);
+  padding: 5px;
+}
+
+.p-3 {
+  border: dotted 3px white;
+  background-color: rgb(219, 150, 213);
+  padding: 5px;
+}
+
+h2 {
+  color: rgb(247, 6, 146);
+}
+
+/*# sourceMappingURL=output.css.map */
